@@ -11,7 +11,7 @@ import SwiftUI
 struct mo_ticTacToeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
