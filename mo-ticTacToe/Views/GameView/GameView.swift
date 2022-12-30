@@ -15,15 +15,18 @@ struct GameView: View {
     var body: some View {
 		GeometryReader { geometry in
 			VStack {
-				Text("Waiting for the player")
+				Text(viewModel.gameNotification)
 
 				Button {
 					mode.wrappedValue.dismiss()
+					viewModel.quitGame()
 				} label: {
 					GameButton(title: "Quit", backgroundColor: Color(.systemRed))
 				}
 
-				LoadingView()
+				if viewModel.game?.player2Id == "" {
+					LoadingView()
+				}
 
 				Spacer()
 
@@ -32,7 +35,7 @@ struct GameView: View {
 						ForEach(0..<9) { index in
 							ZStack {
 								GameSquareView(proxy: geometry)
-								PlayerIndicatorView(systemImageName: viewModel.game.moves[index]?.indicator ?? "applelogo")
+								PlayerIndicatorView(systemImageName: viewModel.game?.moves[index]?.indicator ?? "applelogo")
 							}
 							.onTapGesture {
 								viewModel.processPlayerMove(for: index)
@@ -40,7 +43,31 @@ struct GameView: View {
 						}
 					}
 				}
+				.disabled(viewModel.checkForGameBoardStatus())
+				.padding()
+				.alert(item: $viewModel.alertItem) { alertItem in
+					alertItem.isForQuit ?
+					Alert(title: alertItem.title,
+						  message: alertItem.message,
+						  dismissButton: .destructive(alertItem.buttonTitle,
+						  action: {
+						mode.wrappedValue.dismiss()
+						viewModel.quitGame()
+					})) :
+					Alert(title: alertItem.title,
+						  message: alertItem.message,
+						  primaryButton: .default(alertItem.buttonTitle,
+						  action: {
+						viewModel.resetGame()
+					}), secondaryButton: .destructive(Text("Quit"), action: {
+						mode.wrappedValue.dismiss()
+						viewModel.quitGame()
+					}))
+
+				}
 			}
+		}.onAppear {
+			viewModel.getTheGame()
 		}
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF40A911295EC4D100AF43FA /* GameNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40A910295EC4D100AF43FA /* GameNotifications.swift */; };
 		CF959043295B4C9700E52822 /* mo_ticTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959042295B4C9700E52822 /* mo_ticTacToeApp.swift */; };
 		CF959045295B4C9700E52822 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959044295B4C9700E52822 /* HomeView.swift */; };
 		CF959047295B4C9800E52822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF959046295B4C9800E52822 /* Assets.xcassets */; };
@@ -20,9 +21,17 @@
 		CF959062295C9DDB00E52822 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959061295C9DDB00E52822 /* GameViewModel.swift */; };
 		CF959065295CA13A00E52822 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959064295CA13A00E52822 /* Model.swift */; };
 		CF959067295CAAA000E52822 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959066295CAAA000E52822 /* User.swift */; };
+		CF959069295E9F0D00E52822 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF959068295E9F0D00E52822 /* GoogleService-Info.plist */; };
+		CF95906C295EA19200E52822 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CF95906B295EA19200E52822 /* FirebaseFirestore */; };
+		CF95906E295EA19200E52822 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CF95906D295EA19200E52822 /* FirebaseFirestoreCombine-Community */; };
+		CF959070295EA19200E52822 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF95906F295EA19200E52822 /* FirebaseFirestoreSwift */; };
+		CF959072295EA1DD00E52822 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959071295EA1DD00E52822 /* FirebaseReference.swift */; };
+		CF959075295EA29700E52822 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959074295EA29700E52822 /* FirebaseService.swift */; };
+		CF959077295EBCC300E52822 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF959076295EBCC300E52822 /* AlertItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF40A910295EC4D100AF43FA /* GameNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNotifications.swift; sourceTree = "<group>"; };
 		CF95903F295B4C9700E52822 /* mo-ticTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mo-ticTacToe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF959042295B4C9700E52822 /* mo_ticTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mo_ticTacToeApp.swift; sourceTree = "<group>"; };
 		CF959044295B4C9700E52822 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -37,6 +46,10 @@
 		CF959061295C9DDB00E52822 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		CF959064295CA13A00E52822 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CF959066295CAAA000E52822 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CF959068295E9F0D00E52822 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF959071295EA1DD00E52822 /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		CF959074295EA29700E52822 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		CF959076295EBCC300E52822 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF95906C295EA19200E52822 /* FirebaseFirestore in Frameworks */,
+				CF95906E295EA19200E52822 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				CF959070295EA19200E52822 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +85,9 @@
 		CF959041295B4C9700E52822 /* mo-ticTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				CF959068295E9F0D00E52822 /* GoogleService-Info.plist */,
 				CF959042295B4C9700E52822 /* mo_ticTacToeApp.swift */,
+				CF959073295EA1EE00E52822 /* FirebaseHelpers */,
 				CF959063295CA12E00E52822 /* Model */,
 				CF959058295B51EC00E52822 /* Views */,
 				CF959059295B51FF00E52822 /* SecondaryViews */,
@@ -130,8 +148,19 @@
 			children = (
 				CF959064295CA13A00E52822 /* Model.swift */,
 				CF959066295CAAA000E52822 /* User.swift */,
+				CF959076295EBCC300E52822 /* AlertItem.swift */,
+				CF40A910295EC4D100AF43FA /* GameNotifications.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CF959073295EA1EE00E52822 /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF959071295EA1DD00E52822 /* FirebaseReference.swift */,
+				CF959074295EA29700E52822 /* FirebaseService.swift */,
+			);
+			path = FirebaseHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +179,11 @@
 			dependencies = (
 			);
 			name = "mo-ticTacToe";
+			packageProductDependencies = (
+				CF95906B295EA19200E52822 /* FirebaseFirestore */,
+				CF95906D295EA19200E52822 /* FirebaseFirestoreCombine-Community */,
+				CF95906F295EA19200E52822 /* FirebaseFirestoreSwift */,
+			);
 			productName = "mo-ticTacToe";
 			productReference = CF95903F295B4C9700E52822 /* mo-ticTacToe.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +212,9 @@
 				Base,
 			);
 			mainGroup = CF959036295B4C9700E52822;
+			packageReferences = (
+				CF95906A295EA19200E52822 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = CF959040295B4C9700E52822 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +231,7 @@
 			files = (
 				CF95904A295B4C9800E52822 /* Preview Assets.xcassets in Resources */,
 				CF959047295B4C9800E52822 /* Assets.xcassets in Resources */,
+				CF959069295E9F0D00E52822 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF40A911295EC4D100AF43FA /* GameNotifications.swift in Sources */,
 				CF959062295C9DDB00E52822 /* GameViewModel.swift in Sources */,
 				CF959045295B4C9700E52822 /* HomeView.swift in Sources */,
 				CF95905D295C991100E52822 /* PlayerIndicatorView.swift in Sources */,
@@ -211,9 +250,12 @@
 				CF959051295B4EC200E52822 /* GameView.swift in Sources */,
 				CF959065295CA13A00E52822 /* Model.swift in Sources */,
 				CF95905B295C98A600E52822 /* GameSquareView.swift in Sources */,
+				CF959077295EBCC300E52822 /* AlertItem.swift in Sources */,
+				CF959075295EA29700E52822 /* FirebaseService.swift in Sources */,
 				CF959060295C9C9300E52822 /* LoadingView.swift in Sources */,
 				CF959055295B4FF600E52822 /* HomeViewModel.swift in Sources */,
 				CF959043295B4C9700E52822 /* mo_ticTacToeApp.swift in Sources */,
+				CF959072295EA1DD00E52822 /* FirebaseReference.swift in Sources */,
 				CF959067295CAAA000E52822 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +459,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF95906A295EA19200E52822 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF95906B295EA19200E52822 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF95906A295EA19200E52822 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CF95906D295EA19200E52822 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF95906A295EA19200E52822 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		CF95906F295EA19200E52822 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF95906A295EA19200E52822 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF959037295B4C9700E52822 /* Project object */;
 }

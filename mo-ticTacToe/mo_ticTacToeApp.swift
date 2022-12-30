@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct mo_ticTacToeApp: App {
+
+	init() {
+		FirebaseApp.configure()
+	}
+
     var body: some Scene {
         WindowGroup {
             HomeView()
